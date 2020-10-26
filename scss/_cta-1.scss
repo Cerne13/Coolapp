@@ -1,0 +1,81 @@
+$blue: rgba(54, 123, 245, 1);
+
+.cta-1 {
+  position: relative;
+  text-align: center;
+
+  &__title {
+    color: #4f586a;
+    font-family: 'Bai Jamjuree';
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+    line-height: 51px;
+    margin-top: 80px;
+  }
+
+  &__text {
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 20px;
+    letter-spacing: 0.15px;
+    line-height: 30px;
+    margin: 1em auto;
+    max-width: 760px;
+  }
+
+  &__img {
+    @media only screen and (max-width: 850px) {
+      width: 80%;
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    border-radius: 6px;
+    border: 0;
+    box-shadow: 0px 16px 24px rgba(54, 123, 245, 0.16), 0px 6px 12px rgba(54, 123, 245, 0.16);
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    letter-spacing: 0.75px;
+    line-height: 16px;
+    margin: 32px 12px;
+    text-transform: uppercase;
+    width: 176px;
+
+    &_ghost {
+      background-color: white;
+      border: 1px solid $blue;
+      color: $blue;
+      text-shadow: 0px 8px 16px rgba(54, 123, 245, 0.1), 0px 4px 8px rgba(54, 123, 245, 0.16);
+    }
+
+    &_filled {
+      background: $blue;
+      color: #ffffff;
+    }
+
+    &_demo {
+      font-size: larger;
+      font-weight: 800;
+    }
+  }
+  @media only screen and (max-width: 750px) {
+    &__title {
+      margin-top: 3em;
+      margin-bottom: 0;
+    }
+  }
+
+  @media only screen and (max-width: 580px) {
+    &__title {
+      font-size: 30px;
+      line-height: 32px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+}

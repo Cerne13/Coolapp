@@ -1,0 +1,161 @@
+.f {
+  margin-top: 5em;
+
+  &__links {
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Roboto;
+    font-size: 20px;
+    height: 64px;
+    letter-spacing: 0.15px;
+    line-height: 30px;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      text-decoration: none;
+      margin: 0 12px;
+    }
+
+    a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.87);
+    }
+
+    span {
+      color: lightgray;
+    }
+  }
+
+  &__subscribe {
+    border-radius: 4px;
+    box-shadow: 0px 20px 32px rgba(8, 35, 48, 0.06), 0px 8px 16px rgba(8, 35, 48, 0.1);
+    height: 60px;
+    margin: 48px auto;
+    max-width: 564px;
+
+    button {
+      background: #c6cacc;
+      border-radius: 4px;
+      border-radius: 4px;
+      border: none;
+      color: #ffffff;
+      float: right;
+      font-family: Poppins;
+      font-size: 20px;
+      font-weight: bold;
+      height: 44px;
+      line-height: 32px;
+      margin-right: 8px;
+      margin-top: 8px;
+      width: 172px;
+    }
+
+    input {
+      align-items: center;
+      border: none;
+      color: #919699;
+      font-family: Poppins;
+      font-size: 16px;
+      height: 34px;
+      letter-spacing: 0.25px;
+      line-height: 24px;
+      margin-top: 12px;
+      padding-left: 15px;
+      width: 65%;
+
+      &::placeholder {
+        color: #919699;
+        font-family: Poppins;
+        font-size: 16px;
+        letter-spacing: 0.25px;
+        line-height: 24px;
+        padding-left: 8px;
+      }
+    }
+  }
+
+  &__social {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 5fr 1fr 1fr 1fr 1fr 5fr;
+  }
+
+  &__soc-item {
+    border-radius: 50%;
+    display: grid;
+    height: 56px;
+    margin: 0 12px;
+    place-items: center;
+    width: 56px;
+    background-color: darkgreen;
+
+    &:first-child {
+      grid-column-start: 2;
+    }
+
+    &_twitter {
+      background: #1da1f2;
+    }
+
+    &_facebook {
+      background: #4267b2;
+    }
+
+    &_google {
+      background: #ea4335;
+    }
+
+    &_insta {
+      background: #78909c;
+    }
+  }
+
+  &__copyright {
+    color: #5e6366;
+    font-family: Roboto;
+    font-size: 12px;
+    height: 32px;
+    letter-spacing: 0.4px;
+    line-height: 16px;
+    margin: 48px auto;
+    text-align: center;
+    width: 366px;
+  }
+
+  @media screen and (max-width: 580px) {
+    button {
+      font-size: 14px;
+      height: 44px;
+      width: 82px;
+      margin-right: 2px;
+    }
+
+    &__links {
+      height: auto;
+
+      &_m-hide {
+        display: none !important;
+      }
+    }
+
+    li {
+      display: block;
+      text-decoration: none;
+      margin: 0 auto;
+      font-size: 16px;
+    }
+
+    a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.87);
+    }
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.logo_footer {
+  justify-content: center;
+}

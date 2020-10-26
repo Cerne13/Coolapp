@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@import 'header';
+@import 'cta-1';
+@import 'features-1';
+@import 'cta-2';
+@import 'features-2';
+@import 'cta-3';
+@import 'footer';
+
+body {
+  background: #fff;
+  font-family: Roboto;
+  margin: 0 auto;
+  max-width: 1200px;
+}

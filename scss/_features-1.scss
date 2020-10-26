@@ -1,0 +1,185 @@
+.features {
+  &__title {
+    color: #4f586a;
+    font-family: 'Bai Jamjuree';
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+    line-height: 60px;
+    margin-left: 1em;
+  }
+
+  &__grid {
+    display: grid;
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-columns: 1fr 1fr;
+    gap: 5em 0;
+  }
+
+  &__text-wrap {
+    display: grid;
+    padding: 2em;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas:
+      'icon text'
+      '. readmore';
+  }
+
+  &__icon-wrap {
+    grid-area: icon;
+    display: grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 30px;
+
+    &_1 {
+      background: #dcf7e3;
+      top: 40px;
+    }
+    &_2 {
+      background: #fee4e2;
+      top: 40px;
+    }
+    &_3 {
+      background: #fcf3d7;
+      top: 55px;
+    }
+  }
+
+  &__text-area {
+    grid-area: text;
+    align-self: center;
+
+    h3 {
+      font-family: 'Bai Jamjuree';
+      font-weight: bold;
+      font-size: 34px;
+      line-height: 38px;
+      letter-spacing: -0.01em;
+      margin-top: 0;
+    }
+
+    p {
+      font-family: Roboto;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0.15px;
+      margin-top: -20px;
+    }
+  }
+
+  &__readmore {
+    grid-area: readmore;
+
+    a {
+      color: #367bf5;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.25px;
+      line-height: 24px;
+      text-decoration: none;
+
+      img {
+        width: 10px;
+        height: 10px;
+        background: #e6efff;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  &__img {
+    max-width: 466px;
+    place-self: center end;
+
+    &_left {
+      justify-self: start;
+    }
+  }
+
+  @media only screen and (max-width: 1152px) {
+    &__grid {
+      grid-template-columns: 1fr;
+      place-items: center;
+      gap: 2em;
+    }
+
+    &__img {
+      max-width: 560px;
+      place-self: center center;
+
+      &_left {
+        justify-self: center;
+      }
+    }
+
+    @for $i from 0 through 5 {
+      &__#{$i} {
+        order: $i;
+      }
+    }
+
+    &__title {
+      text-align: center;
+      margin-left: 0;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    &__title {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    &__text-wrap {
+      padding: 1em;
+    }
+
+    &__icon-wrap {
+      width: 50px;
+      height: 50px;
+      margin-right: 30px;
+
+      img {
+        width: 30px;
+      }
+    }
+
+    &__text-area {
+      h3 {
+        font-size: 26px;
+        line-height: 30px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    &__readmore {
+      a {
+        font-size: 16px;
+        line-height: 24px;
+
+        img {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+
+    &__img {
+      width: 80%;
+
+      &_left {
+        width: 80%;
+      }
+    }
+  }
+}
